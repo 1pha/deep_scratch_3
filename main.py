@@ -3,9 +3,10 @@ import numpy as np
 from utils.Variable import *
 from utils.Functions import *
 
-x = Variable(np.array(10))
 f = Square()
-y = f(x)
+g = Exp()
 
-print(type(y))
-print(y.data)
+x = Variable(np.array(0.5))
+fx = f(x)
+gfx = g(fx)
+print(gfx.data)
